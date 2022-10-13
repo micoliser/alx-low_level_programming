@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <unistd.h>
 
 /**
  * main - prints a string to the standard error
@@ -8,7 +8,7 @@ int main(void)
 {
 	char err[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	perror(err);
+	write(2, err, 59);
 
 	return (1);
 }
