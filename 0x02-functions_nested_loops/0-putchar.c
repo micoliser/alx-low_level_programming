@@ -6,9 +6,13 @@
  */
 int main(void)
 {
-	char *str = "putchar\n";
+	char str[7] = "_putchar";
+	int i;
 
-	_putchar(*str);
+	for (i = 0; i < 7; i++)
+		_putchar(str[i]);
+
+	_putchar('\n');
 
 	return (0);
 }
