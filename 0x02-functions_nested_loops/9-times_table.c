@@ -6,14 +6,29 @@
  */
 void times_table(void)
 {
-	int i, j, k;
+	int i, j, k, first, last;
 
 	for (i = 0; i <= 9; i++)
 	{
 		for (j = 0; j <= 9; j++)
 		{
 			k = j * i;
-			_putchar(k + 48);
+			if (k > 9)
+			{
+				first = k;
+
+				while (first >= 10)
+					first = first / 10;
+
+				last = k % 10;
+
+				_putchar(first + 48);
+				_putchar(last + 48);
+			}
+			else
+			{
+				_putchar(k + 48);
+			}
 
 			if (j != 9)
 			{
