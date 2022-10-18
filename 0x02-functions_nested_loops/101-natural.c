@@ -24,7 +24,8 @@ int main(void)
  */
 void print_numbers(int i)
 {
-	int a, sum;
+	int a;
+	int sum = 0;
 
 	for (a = 0; a < i; a++)
 	{
@@ -32,5 +33,5 @@ void print_numbers(int i)
 			sum += a;
 	}
 
-	printf("%d", sum);
+	printf("%d\n", sum);
 }
