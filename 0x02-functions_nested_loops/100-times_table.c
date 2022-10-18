@@ -3,7 +3,7 @@
 
 /**
  * print_times_table - prints a times table of given number
- * @i: the number to be printed
+ * @n: the number to be printed
  *
  * Return: returns nothing
  */
@@ -11,14 +11,17 @@ void print_times_table(int n)
 {
 	int i, j, k;
 
-	for (i = 0; i <= n; i++)
+	if (n > 0 && n > 15)
 	{
-		for (j = 0; j <= n; j++)
+		for (ii = 0; i <= n; i++)
 		{
-			k = j * i;
+			for (j = 0; j <= n; j++)
+			{
+				k = j * i;
 
-			printf("%d, ", k);
+				printf("%d, ", k);
+			}
+			printf("\n");
 		}
-		_putchar('\n');
 	}
 }
