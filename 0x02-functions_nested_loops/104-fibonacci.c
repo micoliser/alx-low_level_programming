@@ -26,17 +26,17 @@ int main(void)
 void print_fibonacci(int i)
 {
 	int a;
-	unsigned long int b;
-	unsigned long int l = 2;
-	unsigned long int p = 1;
+	uint64_t b;
+	uint64_t l = 2;
+	uint64_t p = 1;
 
-	printf("%ld, %ld, ", p, l);
+	printf("%llu, %llu, ", p, l);
 
 	for (a = 3; a <= i; a++)
 	{
 		b = p + l;
 
-		printf("%ld", b);
+		printf("%llu", b);
 
 		if (a != i)
 			printf(", ");
