@@ -26,9 +26,9 @@ int main(void)
 void print_fibonacci(int i)
 {
 	int a;
-	long int b;
-	long int l = 2;
-	long int p = 1;
+	unsigned long int b;
+	unsigned long int l = 2;
+	unsigned long int p = 1;
 
 	printf("%ld, %ld, ", p, l);
 
