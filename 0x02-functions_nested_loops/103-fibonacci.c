@@ -3,9 +3,9 @@
 /**
  * main - prints out the sum of even fibonacci numbers
  *
- * Return: returns nothing
+ * Return: returns 0
  */
-void main(void)
+int main(void)
 {
 	int a;
 	long int b, c, d, sum;
@@ -27,4 +27,6 @@ void main(void)
 		c = d;
 	}
 	printf("%ld\n", sum);
+
+	return (0);
 }
