@@ -25,7 +25,8 @@ int main(void)
  */
 void print_fibonacci(int i)
 {
-	int a, b;
+	int a;
+	long int b;
 	int l = 2;
 	int p = 1;
 
@@ -35,7 +36,7 @@ void print_fibonacci(int i)
 	{
 		b = p + l;
 
-		printf("%ld", (unsigned long)b);
+		printf("%ld", b);
 
 		if (a != i)
 			printf(", ");
