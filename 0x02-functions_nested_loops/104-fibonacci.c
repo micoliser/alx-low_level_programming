@@ -10,11 +10,11 @@ void print_fibonacci(int);
  */
 int main(void)
 {
-        int n = 98;
+	int n = 98;
 
-        print_fibonacci(n);
+	print_fibonacci(n);
 
-        return (0);
+	return (0);
 }
 
 /**
@@ -25,24 +25,24 @@ int main(void)
  */
 void print_fibonacci(int i)
 {
-        int a;
-        long int b;
-        long int l = 2;
-        long int p = 1;
+	int a;
+	long int b;
+	long int l = 2;
+	long int p = 1;
 
-        printf("%ld, %ld, ", p, l);
+	printf("%ld, %ld, ", p, l);
 
-        for (a = 3; a <= i; a++)
-        {
-                b = p + l;
+	for (a = 3; a <= i; a++)
+	{
+		b = p + l;
 
-                printf("%ld", b);
+		printf("%ld", b);
 
-                if (a != i)
-                        printf(", ");
+		if (a != i)
+			printf(", ");
 
-                p = l;
-                l = b;
-        }
-        printf("\n");
+		p = l;
+		l = b;
+	}
+	printf("\n");
 }
