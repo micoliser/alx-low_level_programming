@@ -27,8 +27,8 @@ void print_fibonacci(int i)
 {
 	int a;
 	long int b;
-	int l = 2;
-	int p = 1;
+	long int l = 2;
+	long int p = 1;
 
 	printf("%d, %d, ", p, l);
 
