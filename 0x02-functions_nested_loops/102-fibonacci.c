@@ -35,7 +35,7 @@ void print_fibonacci(int i)
 	{
 		b = p + l;
 
-		printf("%Lf", (unsigned long long)b);
+		printf("%lld", (unsigned long long)b);
 
 		if (a != i)
 			printf(", ");
