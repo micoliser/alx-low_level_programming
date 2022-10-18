@@ -18,7 +18,8 @@ for (i = '0'; i <= '2'; i++)
 			for (l = '0'; l <= '9'; l++)
 			{
 				if (i == '2' && j == '4')
-					break;
+					return;
+
 				_putchar(i);
 				_putchar(j);
 				_putchar(58);
