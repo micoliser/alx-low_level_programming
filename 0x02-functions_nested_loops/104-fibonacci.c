@@ -45,3 +45,4 @@ void print_fibonacci(int i)
                 l = b;
         }
         printf("\n");
+}
