@@ -42,6 +42,8 @@ void print_fibonacci(int i)
 		l = b;
 	}
 
+	b = p + l;
+
 	fl = l / 1000000000;
 	ll = l % 1000000000;
 	fb = b / 1000000000;
