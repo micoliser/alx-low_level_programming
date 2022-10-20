@@ -3,6 +3,8 @@
 /**
  * main - checks prime factors of 612852475143 and
  * prints the largest;
+ *
+ * Return: 0
  */
 int main(void)
 {
