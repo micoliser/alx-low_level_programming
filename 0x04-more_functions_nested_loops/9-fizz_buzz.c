@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
  * main - prints numbers with fizz buzz
@@ -30,7 +29,7 @@ int main(void)
 		}
 	}
 
-	_putchar('\n');
+	printf("\n");
 
 	return (0);
 }
