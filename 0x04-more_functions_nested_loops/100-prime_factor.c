@@ -37,7 +37,7 @@ int main(void)
 
 	num = 612852475143;
 
-	for (a = 1; a <= num; a++)
+	for (a = 2; a <= num; a++)
 	{
 		if (num % a == 0)
 		{
