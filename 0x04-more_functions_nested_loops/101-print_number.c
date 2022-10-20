@@ -7,14 +7,12 @@
  * Return: void
  */
 void print_number(int n)
-{
-	unsigned int m;
-	
+{	
 
 	if (n < 0)
 	{
 		_putchar(45);
-		m = n * -1;
+		n = n * -1;
 	}
 	else if (n == 0)
 	{
@@ -22,10 +20,8 @@ void print_number(int n)
 		return;
 	}
 
-	m = n;
+	if (n / 10)
+		print_number(n / 10);
 
-	if (m / 10)
-		print_number(m / 10);
-
-	_putchar(m % 10 + 48);
+	_putchar(n % 10 + 48);
 }
