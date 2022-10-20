@@ -21,10 +21,10 @@ void print_triangle(int size)
 
 			for (k = 0; k <= i; k++)
 			{
-				_putchar(35);	
+				_putchar(35);
 
 			}
-			
+
 			_putchar('\n');
 		}
 	}
