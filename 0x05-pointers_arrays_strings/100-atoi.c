@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 #include "main.h"
 
 /**
@@ -9,7 +10,27 @@
  */
 int _atoi(char *s)
 {
-	int val = atoi(s);
+	int i, sign, len, val;
 
-	return (val);
+	len = strlen(s);
+	sign = 1;
+
+	for (i = 0; i < len; i++)
+	{
+		if (s[i] == '+')
+		{
+			sign = sign * 1;
+			memmove(&s[i], &s[i + 1], len - 1);
+		}
+		
+		if (s[i] == '-')
+		{
+			sign = sign * -1;
+			memmove(&s[i], &s[i + 1], len - 1);
+		}
+	}
+
+	val = atoi(s);
+
+	return (val * sign);
 }
