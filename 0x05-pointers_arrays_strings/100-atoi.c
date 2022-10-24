@@ -8,25 +8,6 @@
  *
  * Return: the integer
  */
-void remove_char(char *str, char ch)
-{
-	int len, i, j;
-
-	len = strlen(str);
-	for (i = 0; i < len; i++)
-	{
-		if (str[i] == ch)
-		{
-			for (j = i; j < len; j++)
-			{
-				str[j] = str[j + 1];
-			}
-			len--;
-			i--;
-		}
-	}
-}
-
 int _atoi(char *s)
 {
 	int i, sign, len, val;
@@ -41,9 +22,6 @@ int _atoi(char *s)
 			sign = sign * -1;
 		}
 	}
-
-	remove_char(s, '-');
-	remove_char(s, '+');
 
 
 	val = atoi(s);
