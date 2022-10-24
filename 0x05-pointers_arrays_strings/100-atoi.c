@@ -42,8 +42,8 @@ int _atoi(char *s)
 		}
 	}
 
-	remove_char(s, "-");
-	remove_char(s, "+");
+	remove_char(s, '-');
+	remove_char(s, '+');
 
 
 	val = atoi(s);
