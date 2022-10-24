@@ -20,13 +20,13 @@ int _atoi(char *s)
 		if (s[i] == '+')
 		{
 			sign = sign * 1;
-			memmove(&s[i], &s[i + 1], len - 1);
+			strcpy(&s[i], &s[i + 1]);
 		}
 		
 		if (s[i] == '-')
 		{
 			sign = sign * -1;
-			memmove(&s[i], &s[i + 1], len - 1);
+			strcpy(&s[i], &s[i + 1]);
 		}
 	}
 
