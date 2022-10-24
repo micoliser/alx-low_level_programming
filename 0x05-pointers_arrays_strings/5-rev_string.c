@@ -1,5 +1,4 @@
 #include <string.h>
-#include <publib.h>
 #include "main.h"
 
 /**
@@ -10,5 +9,15 @@
  */
 void rev_string(char *s)
 {
-	strrev(s);
+	int i, len;
+	char old;
+
+	len = strlen(s);
+
+	for (i = 0; i < len / 2; i++)
+	{
+		old = s[i];
+		s[i] = str[len - 1 - i];
+		str[len - 1 - i] = old;
+	}
 }
