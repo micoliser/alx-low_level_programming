@@ -10,7 +10,7 @@
 void rev_string(char *s)
 {
 	int i, j, len;
-	char newstr[];
+	char newstr[strlen(S)];
 
 	len = strlen(s);
 	i = len - 1;
@@ -18,7 +18,7 @@ void rev_string(char *s)
 
 	while (i >= len)
 	{
-		newstr[j] = str[i];
+		newstr[j] = s[i];
 
 		i--;
 		j++;
@@ -26,5 +26,3 @@ void rev_string(char *s)
 
 	s = newstr;
 }
-
-
