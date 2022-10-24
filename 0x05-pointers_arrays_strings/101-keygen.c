@@ -23,7 +23,7 @@ int main(void)
 
 		printf("%c", a);
 	}
-	printf("%c\n", 2772 - c);
+	printf("%c\n", 2772 - b);
 
 	return(0);
 }
