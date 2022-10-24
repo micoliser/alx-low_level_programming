@@ -18,7 +18,7 @@ int _atoi(char *s)
 	val = 0;
 
 	for (i = 0; i < len; i++)
-	{	
+	{
 		if (val > 0)
 		{
 			if (isdigit(s[i]) == 0)
