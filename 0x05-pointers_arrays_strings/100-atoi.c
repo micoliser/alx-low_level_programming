@@ -8,9 +8,9 @@
  *
  * Return: the integer
  */
-void remove_char(char str, char ch)
+void remove_char(char *str, char ch)
 {
-	int len;
+	int len, i, j;
 
 	len = strlen(str);
 	for (i = 0; i < len; i++)
