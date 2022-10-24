@@ -16,7 +16,7 @@ int main(void)
 
 	for (b = 0; b < 2772; b = b + a)
 	{
-		a = rand() % 45;
+		a = rand() % 128;
 
 		if (a + b > 2772)
 			break;
