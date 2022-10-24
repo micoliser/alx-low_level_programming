@@ -4,7 +4,7 @@
 /**
  * _strcpy - copies a string to anoder
  * @dest: first
- * @scr: string to be copied
+ * @src: string to be copied
  *
  * Return: the pointer to dest
  */
