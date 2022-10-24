@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <ctype.h>
 #include <string.h>
 #include "main.h"
 
@@ -19,6 +19,13 @@ int _atoi(char *s)
 
 	for (i = 0; i < len; i++)
 	{	
+		if (val > 0)
+		{
+			if (isdigit(s[i]) == 0)
+			{
+				break;
+			}
+		}
 		if (s[i] == '-')
 		{
 			sign = sign * -1;
