@@ -10,10 +10,7 @@
  */
 int _atoi(char *s)
 {
-	int i, j, sign, len, val;
-
-	char a[20];
-	j = 0;
+	int i, sign, len, val;
 
 	len = strlen(s);
 	sign = 1;
@@ -26,13 +23,9 @@ int _atoi(char *s)
 		}
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			a[j] = s[i];
-			j++;
+			val = val * 10 + s[i] - '0';
 		}
 	}
-
-
-	val = atoi(a);
 
 	return (val * sign);
 }
