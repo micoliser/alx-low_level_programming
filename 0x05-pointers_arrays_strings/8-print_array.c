@@ -2,7 +2,8 @@
 #include "main.h"
 
 /**
- *print_array - prints n elements of an array
+ * print_array - prints n elements of an array
+ * @a: the array
  * @n: the number of items to be printed
  *
  * Return: void
