@@ -12,8 +12,6 @@ char *rot13(char *str)
 	char alphabet[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char replace[52] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	len = strlen(str);
-
 	while (str[i] != '\0')
 	{
 		for (j = 0; j < 52; j++)
@@ -24,7 +22,7 @@ char *rot13(char *str)
 				break;
 			}
 		}
-		i++
+		i++;
 	}
 
 	return (str);
