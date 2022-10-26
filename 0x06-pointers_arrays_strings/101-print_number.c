@@ -28,6 +28,4 @@ void print_number(int n)
 		while (digit /= 10)
 			_putchar(((n / digit) % 10) + 48);
 	}
-
-	_putchar('\n');
 }
