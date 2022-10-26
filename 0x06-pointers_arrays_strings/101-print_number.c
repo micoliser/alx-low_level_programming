@@ -6,7 +6,7 @@
  *
  * Return: void
  */
-void print_number(int n);
+void print_number(int n)
 {
 	unsigned int digit = 100000000;
 	unsigned int num = n * 10;
