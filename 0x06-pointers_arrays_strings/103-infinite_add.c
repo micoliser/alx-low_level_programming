@@ -12,14 +12,39 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j, k, l, num;
-	int d[500];
-	int rem = 0;
+	int i, j, res;
 	int len1 = strlen(n1);
 	int len2 = strlen(n2);
 
 	if (len1 + 1 >= size_r)
 		return (0);
+
+	i = 0;
+        j = 0;
+
+	res = add_numbers(n1, n2, len1, len2);
+
+        if (res[0] > 9)
+        {
+                r[0] = 49;
+                r[1] = (res[0] % 9) + 48;
+                j = 2;
+                i = 1;
+        }
+
+        while (i < len1)
+        {
+                r[j] = res[i] + 48;
+                i++;
+                j++;
+        }
+
+        return (r);
+}
+
+int *add_numbers(char *n1, char *n2, int len1, int len2)
+{
+	int i, j, k, l, num, d[500], rem = 0;
 
 	j = len2 - 1;
 	k = len1 - len2 - 1;
@@ -39,14 +64,11 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		d[i] = num;
 		j--;
 	}
-
 	for (l = i; l >= 0; l--)
 	{
 		num = n1[l] - 48;
-
 		if (rem == 1 && l == i)
 			num = num + 1;
-
 		if (num > 9)
 		{
 			num = num - 10;
@@ -58,27 +80,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		}
 		d[l] = num;
 	}
-
 	if (rem == 1)
 		d[0] += 10;
 
-	i = 0;
-	j = 0;
-
-	if (d[0] > 9)
-	{
-		r[0] = 49;
-		r[1] = (d[0] % 9) + 48;
-		j = 2;
-		i = 1;
-	}
-
-	while (i < len1)
-	{
-		r[j] = d[i] + 48;
-		i++;
-		j++;
-	}
-
-	return (r);
+	return (d);
 }
