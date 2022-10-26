@@ -9,15 +9,19 @@
  */
 char *cap_string(char *str)
 {
-	int i, len;
+	int i,j, len;
 	char prev;
+	char sep[13] = " \t\n,;.!?\"(){}";
 
 	len = strlen(str);
 
 	for (i = 0; i < len; i++)
 	{
-		if ((prev < 'a' || prev > 'z') && (prev < 'A' || prev > 'Z') && (prev < '0' || prev > '9'))
+		for (j = 0; j < 13; j++)
 		{
+			if (prev != sep[j])
+				continue;
+
 			if (str[i] >= 'a' && str[i] <= 'z')
 			{
 				str[i] -= 32;
