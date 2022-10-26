@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * rot13 - encodes a string using rot13
@@ -12,7 +13,9 @@ char *rot13(char *str)
 	char alphabet[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char replace[52] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	while (str[i] != '\0')
+	len = strlen(str);
+
+	for (i = 0; i < len; i++)
 	{
 		for (j = 0; j < 52; j++)
 		{
@@ -22,7 +25,6 @@ char *rot13(char *str)
 				break;
 			}
 		}
-		i++;
 	}
 
 	return (str);
