@@ -10,9 +10,9 @@
 char *leet(char *str)
 {
 	int i, j, len;
-	char upper[5] = {'A', 'E', 'O', 'T', 'L'};
-	char lower[5] = {'a', 'e', 'o', 't', 'l'};
-	char num_to_replace = {4, 3, 0, 7, 1};
+	char upper[6] = {'A', 'E', 'O', 'T', 'L'};
+	char lower[6] = {'a', 'e', 'o', 't', 'l'};
+	char num_to_replace[6] = {4, 3, 0, 7, 1};
 
 	len = strlen(str);
 
