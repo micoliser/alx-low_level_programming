@@ -1,6 +1,8 @@
 #include <string.h>
 #include "main.h"
 
+char *add_numbers(char *n1, char *n2, int len1, int len2);
+
 /**
  * infite add - add two numbere
  * @n1: pointer to first number
