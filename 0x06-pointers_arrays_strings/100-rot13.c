@@ -1,4 +1,3 @@
-#include <string.h>
 #include "main.h"
 
 /**
@@ -9,13 +8,13 @@
  */
 char *rot13(char *str)
 {
-	int i, j, len;
-	char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char replace[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	int i, j;
+	char alphabet[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char replace[52] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	len = strlen(str);
 
-	for (i = 0; i < len; i++)
+	while (str[i] != '\0')
 	{
 		for (j = 0; j < 52; j++)
 		{
@@ -25,6 +24,7 @@ char *rot13(char *str)
 				break;
 			}
 		}
+		i++
 	}
 
 	return (str);
