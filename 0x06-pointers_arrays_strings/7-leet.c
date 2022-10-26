@@ -23,6 +23,7 @@ char *leet(char *str)
 			if (str[i] == upper[j] || str[i] == lower[j])
 			{
 				str[i] = num_to_replace[j];
+				break;
 			}
 		}
 	}
