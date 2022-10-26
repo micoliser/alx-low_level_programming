@@ -11,24 +11,21 @@ char *cap_string(char *str)
 {
 	int i, len;
 	char prev;
-	char dest[200], *cpy;
 
-	cpy = strcpy(dest, str);
-
-	len = strlen(cpy);
+	len = strlen(str);
 
 	for (i = 0; i < len; i++)
 	{
 		if ((prev < 'a' || prev > 'z') && (prev < 'A' || prev > 'Z'))
 		{
-			if (cpy[i] >= 'a' && cpy[i] <= 'z')
+			if (str[i] >= 'a' && str[i] <= 'z')
 			{
-				cpy[i] -= 32;
+				str[i] -= 32;
 			}
 		}
 
-		prev = cpy[i];
+		prev = str[i];
 	}
 
-	return (cpy);
+	return (str);
 }
