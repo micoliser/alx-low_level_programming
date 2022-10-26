@@ -12,7 +12,7 @@ char *leet(char *str)
 	int i, j, len;
 	char upper[6] = {'A', 'E', 'O', 'T', 'L'};
 	char lower[6] = {'a', 'e', 'o', 't', 'l'};
-	char num_to_replace[6] = {4, 3, 0, 7, 1};
+	char num_to_replace[6] = {'4', '3', '0', '7', '1'};
 
 	len = strlen(str);
 
