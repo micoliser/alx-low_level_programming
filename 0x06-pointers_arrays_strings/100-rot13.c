@@ -9,7 +9,7 @@
  */
 char *rot13(char *str)
 {
-	int i, j;
+	int i, j, len;
 	char alphabet[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char replace[52] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
