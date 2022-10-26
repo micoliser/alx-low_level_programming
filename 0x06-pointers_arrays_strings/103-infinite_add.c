@@ -1,7 +1,7 @@
 #include <string.h>
 #include "main.h"
 
-char *add_numbers(char *n1, char *n2, int len1, int len2);
+int *add_numbers(char *n1, char *n2, int len1, int len2);
 
 /**
  * infite add - add two numbere
@@ -14,7 +14,8 @@ char *add_numbers(char *n1, char *n2, int len1, int len2);
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j, res;
+	int i, j;
+	int *res;
 	int len1 = strlen(n1);
 	int len2 = strlen(n2);
 
@@ -44,9 +45,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
         return (r);
 }
 
-int *add_numbers(char *n1, char *n2, int len1, int len2)
+int * add_numbers(char *n1, char *n2, int len1, int len2)
 {
-	int i, j, k, l, num, d[500], rem = 0;
+	int i, j, k, l, num, rem = 0;
+	static int d[500];
 
 	j = len2 - 1;
 	k = len1 - len2 - 1;
