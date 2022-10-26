@@ -16,7 +16,7 @@ char *cap_string(char *str)
 
 	for (i = 0; i < len; i++)
 	{
-		if ((prev < 'a' || prev > 'z') && (prev < 'A' || prev > 'Z'))
+		if ((prev < 'a' || prev > 'z') && (prev < 'A' || prev > 'Z') && (prev < '0' || prev > '9'))
 		{
 			if (str[i] >= 'a' && str[i] <= 'z')
 			{
