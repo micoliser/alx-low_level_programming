@@ -25,7 +25,14 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	i = 0;
         j = 0;
 
-	res = add_numbers(n1, n2, len1, len2);
+	if (len1 > len2)
+	{
+		res = add_numbers(n1, n2, len1, len2);
+	}
+	else
+	{
+		res = add_numbers(n2, n1, len2, len1);
+	}
 
         if (res[0] > 9)
         {
