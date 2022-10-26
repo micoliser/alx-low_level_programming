@@ -26,24 +26,18 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	for (i = len1 - 1; i > k; i--)
 	{
-		while (j >= 0)
+		num = rem + (n1[i] - 48) + (n2[j] - 48);
+		if (num > 9)
 		{
-			num = rem + (n1[i] - 48) + (n2[j] - 48);
-
-			if (num > 9)
-			{
-				num = num - 10;
-				rem = 1;
-			}
-			else
-			{
-				rem = 0;
-			}
-
-			d[i] = num;
-			j--;
-			break;
+			num = num - 10;
+			rem = 1;
 		}
+		else
+		{
+			rem = 0;
+		}
+		d[i] = num;
+		j--;
 	}
 
 	for (l = i; l >= 0; l--)
