@@ -22,6 +22,7 @@ char *rot13(char *str)
 			if (str[i] == alphabet[j])
 			{
 				str[i] = replace[j];
+				break;
 			}
 		}
 	}
