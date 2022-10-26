@@ -15,7 +15,7 @@ char *rot13(char *str)
 
 	len = strlen(str);
 
-	for (i = 0; i < len, i++)
+	for (i = 0; i < len; i++)
 	{
 		for (j = 0; j < 52; j++)
 		{
