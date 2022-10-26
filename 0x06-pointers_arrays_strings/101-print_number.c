@@ -8,7 +8,7 @@
  */
 void print_number(int n)
 {
-	unsigned int digit = 100000000;
+	unsigned int digit = 1000000000;
 	unsigned int num = n * 10;
 
 	if (n == 0)
