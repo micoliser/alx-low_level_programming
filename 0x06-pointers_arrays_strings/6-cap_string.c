@@ -14,6 +14,7 @@ char *cap_string(char *str)
 	char sep[13] = " \t\n,;.!?\"(){}";
 
 	len = strlen(str);
+	prev = ' ';
 
 	for (i = 0; i < len; i++)
 	{
@@ -25,6 +26,7 @@ char *cap_string(char *str)
 			if (str[i] >= 'a' && str[i] <= 'z')
 			{
 				str[i] -= 32;
+				break;
 			}
 		}
 
