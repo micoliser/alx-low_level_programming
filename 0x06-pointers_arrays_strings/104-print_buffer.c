@@ -22,25 +22,28 @@ void print_buffer(char *b, int size)
 		{
 			printf("%08x:", i);
 			
-			for (j = i; k < i + 10; k++)
+			for (j = 0; k < 10; k++)
 			{
 				if (j + i >= size)
 					printf(" ");
-				if (j < size)
-					printf("%02x", *(b + j));
 				else
+					printf("%02x", b[i + j]);
+				if (j % 2 != 0 && j != 0)
 					printf(" ");
 			}
-			printf(" ");
-			for (k = i; k < i + 10; k++)
+
+			for (k = 0; k < 10; k++)
 			{
-				if (k >= size)
+				if (k + i >= size)
 					break;
-				if (*(b + k) < 32 || *(b + k) > 126)
-					printf("%c", '.');
+				if (b[i + k] > 32 || b[i + k] < 127)
+					printf("%c", b[i + k]);
 				else
-					printf("%c", *(b + 1));
+					printf(".");
 			}
+			if (i >= size)
+				continue;
+
 			printf("\n");
 		}
 	}
