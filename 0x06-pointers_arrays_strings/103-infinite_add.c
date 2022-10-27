@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdio.h>
 #include "main.h"
 
 int *add_numbers(char *n1, char *n2, int len1, int len2);
@@ -14,7 +15,7 @@ int *add_numbers(char *n1, char *n2, int len1, int len2);
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j;
+	int i, j, big;
 	int *res;
 	int len1 = strlen(n1);
 	int len2 = strlen(n2);
@@ -24,26 +25,32 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	if (len1 >= len2)
 	{
-		if (len1 > size_r)
+		big = len1;
+		if (big + 1 >= size_r)
 			return (0);
 		res = add_numbers(n1, n2, len1, len2);
 	}
 	else
 	{
-		if (len2 > size_r)
+		big = len2;
+		if (big + 1 >= size_r)
 			return (0);
 		res = add_numbers(n2, n1, len2, len1);
 	}
 
+	for (i = 0; i < len1; i++)
+		printf("%d", res[i]);
+	printf("\n");
+
         if (res[0] > 9)
         {
-                r[0] = 49;
-                r[1] = (res[0] % 9) + 48;
+                r[1] = (res[0] % 10) + 48;
+		r[0] = 49;
                 j = 2;
                 i = 1;
         }
 
-        while (i < len1)
+        while (i < big)
         {
                 r[j] = res[i] + 48;
                 i++;
@@ -56,11 +63,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 int * add_numbers(char *n1, char *n2, int len1, int len2)
 {
 	int i, j, k, l, num, rem = 0;
-	static int d[500];
+	static int d[600];
 
 	j = len2 - 1;
 	k = len1 - len2 - 1;
-
 	for (i = len1 - 1; i > k; i--)
 	{
 		num = rem + (n1[i] - 48) + (n2[j] - 48);
@@ -78,9 +84,7 @@ int * add_numbers(char *n1, char *n2, int len1, int len2)
 	}
 	for (l = i; l >= 0; l--)
 	{
-		num = n1[l] - 48;
-		if (rem == 1 && l == i)
-			num = num + 1;
+		num = rem + n1[l] - 48;
 		if (num > 9)
 		{
 			num = num - 10;
