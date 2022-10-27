@@ -24,13 +24,13 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	if (len1 >= len2)
 	{
-		if (len1 >= size_r)
+		if (len1 > size_r)
 			return (0);
 		res = add_numbers(n1, n2, len1, len2);
 	}
 	else
 	{
-		if (len2 >= size_r)
+		if (len2 > size_r)
 			return (0);
 		res = add_numbers(n2, n1, len2, len1);
 	}
