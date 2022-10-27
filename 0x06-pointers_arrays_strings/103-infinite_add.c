@@ -67,7 +67,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 int *add_numbers(char *n1, char *n2, int len1, int len2)
 {
 	int i, j, k, l, num, rem = 0;
-	static int d[250];
+	static int d[500];
 
 	j = len2 - 1;
 	k = len1 - len2 - 1;
