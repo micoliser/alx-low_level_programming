@@ -20,14 +20,14 @@ void print_buffer(char *b, int size)
 	{
 		for (i = 0; i < size; i = i + 10)
 		{
-			printf("%.8x:", i);
+			printf("%08x:", i);
 			
 			for (j = i; k < i + 10; k++)
 			{
-				if (j % 2 == 0)
+				if (j + i >= size)
 					printf(" ");
 				if (j < size)
-					printf("%.2x", *(b + j));
+					printf("%02x", *(b + j));
 				else
 					printf(" ");
 			}
