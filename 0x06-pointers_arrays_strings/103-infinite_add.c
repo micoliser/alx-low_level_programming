@@ -38,10 +38,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		res = add_numbers(n2, n1, len2, len1);
 	}
 
-	for (i = 0; i < len1; i++)
-		printf("%d", res[i]);
-	printf("\n");
-
         if (res[0] > 9)
         {
                 r[1] = (res[0] % 10) + 48;
