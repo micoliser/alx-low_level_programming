@@ -5,7 +5,7 @@
 int *add_numbers(char *n1, char *n2, int len1, int len2);
 
 /**
- * infite add - add two numbere
+ * infinite_add - add two numbere
  * @n1: pointer to first number
  * @n2: pointer to second number
  * @r: pointer to where to store the result;
@@ -21,7 +21,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int len2 = strlen(n2);
 
 	i = 0;
-        j = 0;
+	j = 0;
 
 	if (len1 >= len2)
 	{
@@ -38,25 +38,33 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		res = add_numbers(n2, n1, len2, len1);
 	}
 
-        if (res[0] > 9)
-        {
-                r[1] = (res[0] % 10) + 48;
+	if (res[0] > 9)
+	{
+		r[1] = (res[0] % 10) + 48;
 		r[0] = 49;
-                j = 2;
-                i = 1;
-        }
+		j = 2;
+		i = 1;
+	}
+	while (i < big)
+	{
+		r[j] = res[i] + 48;
+		i++;
+		j++;
+	}
 
-        while (i < big)
-        {
-                r[j] = res[i] + 48;
-                i++;
-                j++;
-        }
-
-        return (r);
+	return (r);
 }
 
-int * add_numbers(char *n1, char *n2, int len1, int len2)
+/**
+ * add_numbers - adds two numbers
+ * @n1: the first number;
+ * @n2: the sencond number
+ * @len1: length of the first number
+ * @len2: length of second number
+ *
+ * Return: array of integers
+ */
+int *add_numbers(char *n1, char *n2, int len1, int len2)
 {
 	int i, j, k, l, num, rem = 0;
 	static int d[250];
