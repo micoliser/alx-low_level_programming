@@ -12,7 +12,8 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char v = strstr(haystack, needle);
+	char *v = strstr(haystack, needle);
 
 	return (v);
 }
+

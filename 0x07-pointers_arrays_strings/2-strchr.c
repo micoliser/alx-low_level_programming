@@ -11,7 +11,7 @@
  */
 char *_strchr(char *s, char c)
 {
-	char v = strchr(s, c);
+	char *v = strchr(s, c);
 
 	return (v);
 }
