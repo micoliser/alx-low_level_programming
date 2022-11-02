@@ -44,9 +44,13 @@ int wildcmp(char *s1, char *s2)
 		r = find_last_index(s1, s2[1], 0);
 
 		if (r == -1)
+		{
 			return (0);
+		}
 		else if (r == 0)
+		{
 			return (wildcmp(s1, &s2[1]));
+		}
 		else
 		{
 			return (wildcmp(&s1[r], &s2[2]));
