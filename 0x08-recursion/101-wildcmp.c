@@ -19,7 +19,7 @@ int find_last_index(char *s, char c, int st)
 	else if (st < 0)
 		return (-1);
 	else
-		return (find_last_index(s, c, st - 1);
+		return (find_last_index(s, c, st - 1));
 }
 
 /**
