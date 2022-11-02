@@ -34,7 +34,7 @@ int wildcmp(char *s1, char *s2)
 	int len, len2, r;
 
 	len = strlen(s1);
-	len2 = strlen(len2);
+	len2 = strlen(s2);
 
 	if (len == 0 && len2 == 0)
 	{
