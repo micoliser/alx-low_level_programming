@@ -21,5 +21,5 @@ void _puts_recursion(char *s)
 	}
 
 	_putchar(s[i]);
-	_puts_recursion(s[i + 1]);
+	_puts_recursion(*s[i + 1]);
 }
