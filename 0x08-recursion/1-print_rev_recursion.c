@@ -21,5 +21,5 @@ void _print_rev_recursion(char *s)
 
 	s[len - 1] = '\0';
 
-	_print_rev_recursion(&s);
+	_print_rev_recursion(s);
 }
