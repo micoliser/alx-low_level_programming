@@ -13,8 +13,7 @@ int find_last_index(char *s, char c, int st)
 {
 	if (c == '*')
 		return (0);
-
-	if (s[st] == c)
+	else if (s[st] == c)
 		return (st + 1);
 	else if (st < 0)
 		return (-1);
@@ -50,9 +49,9 @@ int wildcmp(char *s1, char *s2)
 		if (r == -1)
 			return (0);
 		else if (r == 0)
-			return wildcmp(s1, &s2[1]);
+			return (wildcmp(s1, &s2[1]));
 		else
-			return wildcmp(&s1[r], &s2[2]);
+			return (wildcmp(&s1[r], &s2[2]));
 	}
 	else if (s1[0] != s2[0])
 	{
@@ -60,6 +59,6 @@ int wildcmp(char *s1, char *s2)
 	}
 	else
 	{
-		return wildcmp(&s1[1], &s2[1]);
+		return (wildcmp(&s1[1], &s2[1]));
 	}
 }
