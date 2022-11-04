@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int check_change(amount);
+int check_change(int amount);
 
 /**
  * main - prints the minimum number of coins to make change
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
  *
  * Return: number of possible coins
  */
-int check_change(amount)
+int check_change(int amount)
 {
 	int count = 0;
 
