@@ -26,7 +26,7 @@ char **strtow(char *str)
 		prev = str[i];
 	}
 
-	a = malloc(size * sizeof(char *));
+	/* a = malloc(size * sizeof(char *)); */
 
 	prev = 'k';
 	for (i = 0; i < size; i++)
