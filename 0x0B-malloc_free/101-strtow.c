@@ -33,7 +33,7 @@ char **strtow(char *str)
 	if (k == 0)
 		return (NULL);
 
-	a = malloc(size * sizeof(char *));
+	a = malloc((size + 1) * sizeof(char *));
 
 	prev = ' ';
 	for (i = 0; i < size; i++)
