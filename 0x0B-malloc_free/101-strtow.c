@@ -42,6 +42,9 @@ char **strtow(char *str)
 		{
 			if (str[j] != ' ' && prev == ' ')
 			{
+				if (i == 0)
+					continue;
+
 				prev = 'k';
 				break;
 			}
@@ -68,6 +71,9 @@ char **strtow(char *str)
 		{
 			if (str[j] != ' ' && prev == ' ')
 			{
+				if (i == 0)
+					continue;
+
 				prev = 'k';
 				break;
 			}
