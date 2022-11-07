@@ -39,6 +39,7 @@ char **alloc(char *str, int len, int size)
 		}
 		size2 = 0;
 	}
+	a[size] = NULL;
 
 	return (a);
 }
@@ -52,7 +53,7 @@ char **alloc(char *str, int len, int size)
 char **strtow(char *str)
 {
 	char **a, prev = ' ';
-	int i, j, k = 0, len, size = 0;
+	int i, j = 0, k = 0, c = 0, len, size = 0;
 
 	if (str == NULL || strlen(str) == 0)
 		return (NULL);
@@ -60,18 +61,14 @@ char **strtow(char *str)
 	for (i = 0; i < len; i++)
 	{
 		if (str[i] != ' ')
-			k = 1;
+			c = 1;
 		if (str[i] != ' ' && prev == ' ')
 			size++;
 		prev = str[i];
 	}
-	if (k == 0)
-		return (NULL);
 	a = alloc(str, len, size);
-	if (a == NULL)
+	if (a == NULL || c == 0)
 		return (NULL);
-	j = 0;
-	k = 0;
 	prev = ' ';
 	for (i = 0; i < size; i++)
 	{
@@ -94,7 +91,5 @@ char **strtow(char *str)
 		a[i][k] = '\0';
 		k = 0;
 	}
-	a[i] = NULL;
 	return (a);
 }
-
