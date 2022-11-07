@@ -2,7 +2,7 @@
 
 /**
  * free_grid - fress a 2 dimensional grid
- * @grid - pointer to grid
+ * @grid: pointer to grid
  * @height: height of grid
  *
  * Return: void
