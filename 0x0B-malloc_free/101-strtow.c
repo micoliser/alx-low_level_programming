@@ -77,7 +77,6 @@ char **strtow(char *str)
 			}
 			prev = str[j];
 			j++;
-			k++;
 		}
 		a[i][k] = '\0';
 
