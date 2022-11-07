@@ -11,7 +11,7 @@ char **strtow(char *str)
 	char **a, prev;
 	int i, j, k, len, size, size2;
 
-	if (str == NULL || len(str) == 0)
+	if (str == NULL || strlen(str) == 0)
 		return (NULL);
 
 	len = strlen(str);
