@@ -43,7 +43,7 @@ char **strtow(char *str)
 			if (str[j] != ' ' && prev == ' ')
 			{
 				if (i == 0)
-					continue;
+					i--;
 
 				prev = 'k';
 				break;
