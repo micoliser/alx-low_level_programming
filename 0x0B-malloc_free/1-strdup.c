@@ -15,7 +15,7 @@ char *_strdup(char *str)
 
 	len = strlen(str);
 
-	c = strcmp(str, NULL);
+	c = strcmp(str, "NULL");
 
 	if (c == 0)
 		return (NULL);
