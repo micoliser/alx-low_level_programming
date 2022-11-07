@@ -60,6 +60,7 @@ char **strtow(char *str)
 
 	j = 0;
 	k = 0;
+	prev = 'k';
 
 	for (i = 0; i < size; i++)
 	{
