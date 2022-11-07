@@ -11,7 +11,7 @@
 char **alloc(char *str, int len, int size)
 {
 	int i, j, size2;
-	char **a;
+	char **a, prev;
 
 	a = malloc((size + 1) * sizeof(char *));
 	prev = ' ';
@@ -51,10 +51,9 @@ char **alloc(char *str, int len, int size)
  */
 char **strtow(char *str)
 {
-	char **a, prev;
+	char **a, prev = ' ';
 	int i, j, k = 0, len, size = 0;
 
-	prev = ' ';
 	if (str == NULL || strlen(str) == 0)
 		return (NULL);
 	len = strlen(str);
