@@ -11,7 +11,7 @@ char **strtow(char *str)
 	char **a, prev;
 	int i, j, k, len, size, size2;
 
-	if (str == NULL || str == "")
+	if (str == NULL || len(str) == 0)
 		return (NULL);
 
 	len = strlen(str);
@@ -71,7 +71,7 @@ char **strtow(char *str)
 			j++;
 			k++;
 		}
-		a[i][k] == '\0';
+		a[i][k] = '\0';
 
 		k = 0;
 	}
