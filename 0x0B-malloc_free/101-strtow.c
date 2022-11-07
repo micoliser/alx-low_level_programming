@@ -51,9 +51,10 @@ char **alloc(char *str, int len, int size)
  */
 char **strtow(char *str)
 {
-	char **a, prev = ' ';
+	char **a, prev;
 	int i, j, k = 0, len, size = 0;
 
+	prev = ' ';
 	if (str == NULL || strlen(str) == 0)
 		return (NULL);
 	len = strlen(str);
@@ -69,7 +70,7 @@ char **strtow(char *str)
 		return (NULL);
 	a = alloc(str, len, size);
 	if (a == NULL)
-		return (NULL)
+		return (NULL);
 	j = 0;
 	k = 0;
 	prev = ' ';
