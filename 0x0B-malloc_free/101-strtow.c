@@ -20,12 +20,18 @@ char **strtow(char *str)
 	k = 0;
 	size = 0;
 	size2 = 0;
+
 	for (i = 0; i < len; i++)
 	{
+		if (str[i] != ' ')
+			k = 1;
 		if (str[i] != ' ' && prev == ' ')
 			size++;
 		prev = str[i];
 	}
+
+	if (k == 0)
+		return (NULL);
 
 	a = malloc(size * sizeof(char *));
 
@@ -53,6 +59,7 @@ char **strtow(char *str)
 	}
 
 	j = 0;
+	k = 0;
 
 	for (i = 0; i < size; i++)
 	{
