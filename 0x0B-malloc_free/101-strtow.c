@@ -52,7 +52,7 @@ char **strtow(char *str)
 			j++;
 		}
 
-		a[i] = malloc(size2 * sizeof(char));
+		a[i] = malloc((size2 + 1) * sizeof(char));
 		if (a[i] == NULL)
 		{
 			return (NULL);
