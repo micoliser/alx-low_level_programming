@@ -9,7 +9,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i, len1, len2;
+	int i, len1, len2, lenp;
 	char *p;
 
 	if (s1 == NULL)
@@ -32,7 +32,8 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; i < len2; i++)
 		p[i + len1] = s2[i];
 
-	p[len1 + len2 - 1] = '\0';
+	lenp = strlen(p);
+	p[lenp] = '\0';
 
 	return (p);
 }
