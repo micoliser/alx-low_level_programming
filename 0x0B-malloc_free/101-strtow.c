@@ -50,12 +50,14 @@ char **strtow(char *str)
 			prev = str[j];
 			j++;
 		}
-		
+
 		a[i] = malloc(size2 * sizeof(char));
 		if (a[i] == NULL)
 		{
 			return (NULL);
 		}
+
+		size2 = 0;
 	}
 
 	j = 0;
