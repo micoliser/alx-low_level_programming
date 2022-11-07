@@ -1,41 +1,21 @@
 #include "main.h"
 
 /**
- * strtow - splits a string into words
- * @str: the string to split
+ * alloc - accates space in memory for an array
+ * @str: string
+ * @len: length of string
+ * @size: size of array
  *
- * Return: a pointer to an array of strings or NULL if error
+ * Return: a pointer to the array or null if allocation was unsucessful
  */
-char **strtow(char *str)
+char **alloc(char *str, int len, int size)
 {
-	char **a, prev;
-	int i, j, k, len, size, size2;
-
-	if (str == NULL || strlen(str) == 0)
-		return (NULL);
-
-	len = strlen(str);
-	prev = ' ';
-	j = 0;
-	k = 0;
-	size = 0;
-	size2 = 0;
-
-	for (i = 0; i < len; i++)
-	{
-		if (str[i] != ' ')
-			k = 1;
-		if (str[i] != ' ' && prev == ' ')
-			size++;
-		prev = str[i];
-	}
-
-	if (k == 0)
-		return (NULL);
+	int i, j, size2;
+	char **a;
 
 	a = malloc((size + 1) * sizeof(char *));
-
 	prev = ' ';
+
 	for (i = 0; i < size; i++)
 	{
 		while (j < len)
@@ -57,14 +37,42 @@ char **strtow(char *str)
 		{
 			return (NULL);
 		}
-
 		size2 = 0;
 	}
 
+	return (a);
+}
+
+/**
+ * strtow - splits a string into words
+ * @str: the string to split
+ *
+ * Return: a pointer to an array of strings or NULL if error
+ */
+char **strtow(char *str)
+{
+	char **a, prev = ' ';
+	int i, j, k = 0, len, size = 0;
+
+	if (str == NULL || strlen(str) == 0)
+		return (NULL);
+	len = strlen(str);
+	for (i = 0; i < len; i++)
+	{
+		if (str[i] != ' ')
+			k = 1;
+		if (str[i] != ' ' && prev == ' ')
+			size++;
+		prev = str[i];
+	}
+	if (k == 0)
+		return (NULL);
+	a = alloc(str, len, size);
+	if (a == NULL)
+		return (NULL)
 	j = 0;
 	k = 0;
 	prev = ' ';
-
 	for (i = 0; i < size; i++)
 	{
 		while (j < len)
@@ -84,11 +92,9 @@ char **strtow(char *str)
 			j++;
 		}
 		a[i][k] = '\0';
-
 		k = 0;
 	}
 	a[i] = NULL;
-
 	return (a);
 }
 
