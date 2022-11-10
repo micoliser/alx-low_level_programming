@@ -13,10 +13,7 @@ void *malloc_checked(unsigned int b)
 	s = malloc(b);
 	if (s == NULL)
 	{
-		_putchar('9');
-		_putchar('8');
-		_putchar('\n');
+		exit(98);
 	}
-	
 	return (s);
 }
