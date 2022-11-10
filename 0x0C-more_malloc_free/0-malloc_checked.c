@@ -8,11 +8,17 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	char *s;
+	void *s;
 
 	s = malloc(b);
 	if (s == NULL)
-		return (98);
-
-	return (s);
+	{
+		_putchar('9');
+		_putchar('8');
+		_putchar('\n');
+	}
+	else
+	{
+		return (s);
+	}
 }
