@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	unsigned long long res;
+	unsigned long int res;
 
 	int i, j, len;
 
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
 	res = atoi(argv[1]) * atoi(argv[2]);
 
-	printf("%lld\n", res);
+	printf("%ld\n", res);
 
 	return(0);
 }
