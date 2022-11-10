@@ -8,7 +8,7 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	void *s;
+	int *s;
 
 	s = malloc(b);
 	if (s == NULL)
@@ -17,8 +17,6 @@ void *malloc_checked(unsigned int b)
 		_putchar('8');
 		_putchar('\n');
 	}
-	else
-	{
-		return (s);
-	}
+	
+	return (s);
 }
