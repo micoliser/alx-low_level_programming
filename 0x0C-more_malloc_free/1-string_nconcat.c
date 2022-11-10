@@ -32,7 +32,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; i < len1; i++)
 		s[i] = s1[i];
 	for (i = 0; i < n && len2 != 0; i++)
+	{
+		if (s2[i] == '\0')
+		{
+			i++;
+			break;
+		}
 		s[i + len1] = s2[i];
+	}
+
+	while (i < n)
+	{
+		s[i + len1] = '\0';
+		i++;
+	}
 
 	len3 = strlen(s);
 	s[len3] = '\0';
