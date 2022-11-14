@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "dog.h"
+#include <stdio.h>
 
 /**
  * print_dog - prints a dog
@@ -9,10 +9,29 @@
  */
 void print_dog(struct dog *d)
 {
-	if (!= NULL)
+	if (d != NULL)
 	{
-		printf("Name: %s\n", d->name == NULL ? "(nil)" : d->name);
-		printf("Age: %.6f\n", d->age == NULL ? "(nil)" : d->age);
-		printf("Owner: %s\n", d->owner == NULL ? "(nil)" : d->owner);
+		if (!(d->name))
+			printf("Name: (nil)\n");
+		else
+			printf("Name: %s\n", d->name);
+
+		printf("Age: %d\n", d->age);
+
+		if (!(d->owner))
+			printf("Owner: (nil)\n");
+		else
+			printf("Owner: %s\n", d->owner);
 	}
+}
+
+int main(void)
+{
+    struct dog my_dog;
+
+    my_dog.name = "Poppy";
+    my_dog.age = 3.5;
+    my_dog.owner = "Bob";
+    print_dog(&my_dog);
+    return (0);
 }
