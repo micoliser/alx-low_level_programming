@@ -10,19 +10,19 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	char *dog_name = name;
-	char *dog_owner = owner;
-
 	dog_t *dog;
 
 	dog = malloc(sizeof(dog_t));
 
-	if (dog == NULL)
+	if (dog == NULL || !name || !owner)
+	{
+		free(dog);
 		return (NULL);
+	}
 
-	dog->name = dog_name;
+	dog->name = name;
 	dog->age = age;
-	dog->owner = dog_owner;
+	dog->owner = owner;
 
 	return (dog);
 }
