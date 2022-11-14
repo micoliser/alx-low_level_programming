@@ -1,1 +1,1 @@
-# 0x0E Structures and type defs
+# 0x0E Structures type defs
