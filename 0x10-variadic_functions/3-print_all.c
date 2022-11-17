@@ -13,7 +13,7 @@ void print_all(const char * const format, ...)
 	char *next, fmt[5] = "cifs";
 
 	va_start(things_to_print, format);
-	while (format[i] != '\0')
+	while (format && format[i] != '\0')
 	{
 		j = 0;
 		while (fmt[j] != '\0')
