@@ -1,5 +1,7 @@
 #include "lists.h"
 
+void free_listp(listptr_t **head);
+
 /**
  * print_listint_safe - prints a list
  * @head: the list
