@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print-binary - prints a number in binary
+ * print_binary - prints a number in binary
  * @n: the integer
  *
- * Return: the number in binary
+ * Return: void
  */
 void print_binary(unsigned long int n)
 {
