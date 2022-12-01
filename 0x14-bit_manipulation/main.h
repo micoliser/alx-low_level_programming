@@ -8,5 +8,6 @@
 int _putchar(char c);
 unsigned int binary_to_uint(const char *);
 void print_binary(unsigned long int n);
+int get_bit(unsigned long int, unsigned int);
 
 #endif
