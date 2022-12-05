@@ -14,8 +14,6 @@ void open_write_file(char *filename, char *text);
  */
 int main(int argc, char *argv[])
 {
-	int from, to;
-	long int r;
 	char *buf;
 
 	if (argc != 3)
