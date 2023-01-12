@@ -1,5 +1,11 @@
 #include "lists.h"
 
+/**
+ * is_palindrome - checks if a number is palindrome
+ * @num: the number
+ *
+ * Return: 1 if number is palindrome and 0 if not
+ */
 int is_palindrome(unsigned long int num)
 {
 	int *arr, i, length;
@@ -14,7 +20,7 @@ int is_palindrome(unsigned long int num)
 	n = num;
 	for (i = 0; n != 0; n /= 10, i++)
 		arr[i] = n % 10;
-	
+
 	for (i = 0; i < (length / 2); i++)
 	{
 		if (arr[i] != arr[length - 1 - i])
@@ -27,7 +33,8 @@ int is_palindrome(unsigned long int num)
 }
 
 /**
- * main - finds large number
+ * main - finds the largest palindrome made from the
+ * product of two 3-digit numbers
  *
  * Return: always 0
  */
