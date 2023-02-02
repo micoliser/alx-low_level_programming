@@ -12,6 +12,9 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *head;
 	char *res = NULL;
 
+	if (!ht)
+		return;
+
 	res = realloc_res(res, "{");
 
 	for (i = 0; i < ht->size; i++)

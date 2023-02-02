@@ -60,7 +60,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  * Return: 1 if successfull and 0 otherwise
  */
 int handle_collision(hash_table_t *table, unsigned long int index,
-			const char *key, const char *value)
+		const char *key, const char *value)
 {
 	hash_node_t *head, *new_node;
 
@@ -74,6 +74,8 @@ int handle_collision(hash_table_t *table, unsigned long int index,
 	new_node->value = strdup(value);
 	new_node->next = head;
 	table->array[index] = new_node;
+
+	head = table->array[index];
 
 	return (1);
 }
