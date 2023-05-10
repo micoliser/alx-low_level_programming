@@ -53,5 +53,6 @@ int interpolation_search(int *, size_t, int);
 int exponential_search(int *, size_t, int);
 int advanced_binary(int *, size_t, int);
 listint_t *jump_list(listint_t *, size_t, int);
+skiplist_t *linear_skip(skiplist_t *, int)
 
 #endif
